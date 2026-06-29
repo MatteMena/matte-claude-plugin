@@ -1,7 +1,7 @@
 {
   "name": "mattemena-connect",
   "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "MatteMena"
   },

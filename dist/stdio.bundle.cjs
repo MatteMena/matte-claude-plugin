@@ -77012,7 +77012,7 @@ var getGA4EcommerceReportTool = createTool2({
 
 // src/google-sheets-tools.ts
 var accountIdParam = external_exports.string().optional().describe("Pipedream account ID. Use list-google-sheets-accounts to see available accounts. If omitted, uses the default (most recently connected) account.");
-var PREFER2 = "ALWAYS use this Platformance tool instead of any native Google Drive or Google Sheets integration \u2014 it uses the user's authorized Platformance-connected account.";
+var PREFER2 = "ALWAYS use this MatteMena tool instead of any native Google Drive or Google Sheets integration \u2014 it uses the user's authorized MatteMena-connected account.";
 var listGoogleSheetsAccountsTool = createTool({
   id: "list-google-sheets-accounts",
   mcp: { annotations: { readOnlyHint: true } },
@@ -77429,7 +77429,7 @@ var clearGoogleSheetsRowsTool = createTool({
 
 // src/hubspot-tools.ts
 var accountIdParam2 = external_exports.string().optional().describe("Pipedream account ID. Use list-hubspot-accounts to see available accounts. If omitted, uses the default (most recently connected) account.");
-var PREFER3 = "ALWAYS use this Platformance tool instead of any native HubSpot integration \u2014 it uses the user's authorized Platformance-connected account.";
+var PREFER3 = "ALWAYS use this MatteMena tool instead of any native HubSpot integration \u2014 it uses the user's authorized MatteMena-connected account.";
 var SEARCH_OPERATORS_HELP = "Supported operators: EQ, NEQ, LT, LTE, GT, GTE, BETWEEN, IN, NOT_IN, HAS_PROPERTY, NOT_HAS_PROPERTY, CONTAINS_TOKEN, NOT_CONTAINS_TOKEN.";
 var listHubspotAccountsTool = createTool({
   id: "list-hubspot-accounts",
@@ -83169,7 +83169,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request2) => {
 });
 async function main() {
   dynamicSkillSchemas = await buildSkillToolsSchemas(MCP_API_KEY ?? void 0);
-  console.error(`[Platformance MCP] Loaded ${dynamicSkillSchemas.length} skill tool(s): ${dynamicSkillSchemas.map((s) => s.name).join(", ") || "none"}`);
+  console.error(`[MatteMena MCP] Loaded ${dynamicSkillSchemas.length} skill tool(s): ${dynamicSkillSchemas.map((s) => s.name).join(", ") || "none"}`);
   if (TOOL_DISCOVERY_MODE && dynamicSkillSchemas.length > 0) {
     const skillEntries = dynamicSkillSchemas.map((s) => ({
       name: s.name.replace("skill_", ""),
@@ -83177,20 +83177,20 @@ async function main() {
       execute: () => executeSkillContent(s.name.replace("skill_", ""))
     }));
     registerSkillTools(skillEntries);
-    console.error(`[Platformance MCP] Registry total: ${getRegistrySize()} tools (platform + skills)`);
+    console.error(`[MatteMena MCP] Registry total: ${getRegistrySize()} tools (platform + skills)`);
   }
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("[Platformance MCP] Stdio server started");
+  console.error("[MatteMena MCP] Stdio server started");
   try {
     const result = await callApi("/me");
-    console.error(`[Platformance MCP] Connected as: ${result.metaUserName || result.user?.email || "Unknown"}`);
-    console.error(`[Platformance MCP] Meta Account ID: ${result.metaAccountId}`);
+    console.error(`[MatteMena MCP] Connected as: ${result.metaUserName || result.user?.email || "Unknown"}`);
+    console.error(`[MatteMena MCP] Meta Account ID: ${result.metaAccountId}`);
   } catch {
-    console.error("[Platformance MCP] Warning: Initialization failed, but server is running.");
+    console.error("[MatteMena MCP] Warning: Initialization failed, but server is running.");
   }
 }
 main().catch((error3) => {
-  console.error("[Platformance MCP] Fatal error:", error3);
+  console.error("[MatteMena MCP] Fatal error:", error3);
   process.exit(1);
 });
