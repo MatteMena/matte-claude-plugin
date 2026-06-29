@@ -1,7 +1,7 @@
 {
   "name": "mattemena-connect",
   "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "MatteMena"
   },
@@ -26,6 +26,10 @@
         "API_BASE_URL": "https://ap-southeast-1-test-api.connect.platformance.io",
         "TOOL_DISCOVERY_MODE": "true"
       }
+    },
+    "mattemena-remote": {
+      "type": "http",
+      "url": "https://test-mcp.nerve.mattemena.com/mcp"
     }
   }
 }
