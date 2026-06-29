@@ -1,15 +1,15 @@
 {
-  "name": "platformance",
+  "name": "mattemena",
   "owner": {
     "name": "MatteMena",
-    "email": "support@platformance.io"
+    "email": "support@mattemena.com"
   },
   "metadata": {
-    "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via Platformance"
+    "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena"
   },
   "plugins": [
     {
-      "name": "platformance-connect",
+      "name": "mattemena-connect",
       "source": "./",
       "description": "Access and manage Meta, TikTok, Google Ads, and GA4 campaigns from Claude"
     }

@@ -1,24 +1,24 @@
 {
-  "name": "platformance-connect",
-  "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via Platformance",
+  "name": "mattemena-connect",
+  "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena",
   "version": "1.0.0",
   "author": {
     "name": "MatteMena"
   },
-  "homepage": "https://platformance.io",
+  "homepage": "https://www.mattemena.com/",
   "repository": "https://github.com/MatteMena/matte-claude-plugin",
   "license": "MIT",
   "userConfig": {
     "api_key": {
       "type": "string",
-      "title": "Platformance API Key",
-      "description": "Your API key from connect.platformance.io. Sign up and connect your ad accounts first.",
+      "title": "MatteMena API Key",
+      "description": "Your API key from nerve.mattemena.com. Sign up and connect your ad accounts first.",
       "sensitive": true,
       "required": true
     }
   },
   "mcpServers": {
-    "platformance": {
+    "mattemena": {
       "command": "node",
       "args": ["${CLAUDE_PLUGIN_ROOT}/dist/stdio.bundle.cjs"],
       "env": {
