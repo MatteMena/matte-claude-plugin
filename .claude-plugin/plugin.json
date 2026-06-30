@@ -1,32 +1,14 @@
 {
-  "name": "mattemena-connect",
+  "name": "mattemena-nerve",
   "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "author": {
     "name": "MatteMena"
   },
   "homepage": "https://www.mattemena.com/",
   "repository": "https://github.com/MatteMena/matte-claude-plugin",
   "license": "MIT",
-  "userConfig": {
-    "api_key": {
-      "type": "string",
-      "title": "MatteMena API Key",
-      "description": "Your API key from nerve.mattemena.com. Sign up and connect your ad accounts first.",
-      "sensitive": true,
-      "required": true
-    }
-  },
   "mcpServers": {
-    "mattemena-local": {
-      "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/stdio.bundle.cjs"],
-      "env": {
-        "MCP_API_KEY": "${user_config.api_key}",
-        "API_BASE_URL": "https://ap-southeast-1-test-api.connect.platformance.io",
-        "TOOL_DISCOVERY_MODE": "true"
-      }
-    },
     "mattemena-remote": {
       "type": "http",
       "url": "https://test-mcp.nerve.mattemena.com/mcp"
