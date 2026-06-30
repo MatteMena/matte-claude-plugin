@@ -5,13 +5,13 @@
     "email": "support@mattemena.com"
   },
   "metadata": {
-    "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena"
+    "description": "Connect Claude to your advertising platforms — Meta, TikTok, Google Ads, GA4, Snapchat Ads, Google Sheets, and HubSpot — for AI-powered cross-platform ad management and analytics."
   },
   "plugins": [
     {
       "name": "mattemena-nerve",
       "source": "./",
-      "description": "Access and manage Meta, TikTok, Google Ads, and GA4 campaigns from Claude"
+      "description": "Manage Meta, TikTok, Google Ads, GA4, Snapchat Ads, Google Sheets, and HubSpot from Claude"
     }
   ]
 }
