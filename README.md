@@ -6,13 +6,13 @@ This repo contains only the plugin packaging (`.claude-plugin/`) and the built M
 
 The plugin declares two MCP server connectors — pick whichever fits:
 
-- **`mattemena`** (local): runs the bundled `dist/stdio.bundle.cjs` directly. Prompts for your API key at install (`userConfig.api_key`).
+- **`mattemena-local`** (local): runs the bundled `dist/stdio.bundle.cjs` directly. Prompts for your API key at install (`userConfig.api_key`).
 - **`mattemena-remote`** (hosted): connects to `https://test-mcp.nerve.mattemena.com/mcp`, a remote HTTP MCP server with a full OAuth 2.0 + PKCE flow. No API key in config — authenticate via the connector's own login page when prompted.
 
 ## Install
 
 1. Sign up at [nerve.mattemena.com](https://nerve.mattemena.com/) and connect your Meta / TikTok / Google Ads / GA4 accounts.
-2. Copy your MatteMena API key from the dashboard (only needed for the local `mattemena` connector).
+2. Copy your MatteMena API key from the dashboard (only needed for the local `mattemena-local` connector).
 3. In Claude Code: **Add marketplace → Add from a repository** → `https://github.com/MatteMena/matte-claude-plugin`
 4. Install the `mattemena-connect` plugin, then enable whichever connector you prefer from the plugin's detail page.
 

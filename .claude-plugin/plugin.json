@@ -1,7 +1,7 @@
 {
   "name": "mattemena-connect",
   "description": "Connect Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via MatteMena",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "MatteMena"
   },
@@ -18,7 +18,7 @@
     }
   },
   "mcpServers": {
-    "mattemena": {
+    "mattemena-local": {
       "command": "node",
       "args": ["${CLAUDE_PLUGIN_ROOT}/dist/stdio.bundle.cjs"],
       "env": {
