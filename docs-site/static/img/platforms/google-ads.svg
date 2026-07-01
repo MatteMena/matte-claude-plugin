@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <rect width="40" height="40" rx="9" fill="#fff" stroke="#e4e4e7" stroke-width="1"/>
+  <!-- Google Ads — exact match from AccountsTab.tsx GoogleAdsIcon -->
+  <g transform="translate(10,10) scale(0.104)">
+    <circle cx="26" cy="158" r="26" fill="#34A853"/>
+    <rect x="-22" y="-77.5" width="44" height="155" rx="22" fill="#FBBC04"
+      transform="translate(60.8 89.1) rotate(27)"/>
+    <rect x="-22" y="-77.5" width="44" height="155" rx="22" fill="#4285F4"
+      transform="translate(131.2 89.1) rotate(-27)"/>
+  </g>
+</svg>

@@ -1,0 +1,151 @@
+/* ─── MatteMena brand theme ─────────────────────────────────────────────────── */
+/* Primary palette: #1a2057 (navy) · #22299c (indigo) · #EEF0FA (soft accent)  */
+
+:root {
+  /* Infima primary — matches the frontend #22299c */
+  --ifm-color-primary:         #22299c;
+  --ifm-color-primary-dark:    #1e2489;
+  --ifm-color-primary-darker:  #1b2079;
+  --ifm-color-primary-darkest: #151963;
+  --ifm-color-primary-light:   #2b34b8;
+  --ifm-color-primary-lighter: #3540c6;
+  --ifm-color-primary-lightest:#4d5ad4;
+
+  /* Layout */
+  --ifm-background-color:      #fafafa;
+  --ifm-background-surface-color: #ffffff;
+
+  /* Navbar → deep navy, matching the app sidebar */
+  --ifm-navbar-background-color: #1a2057;
+  --ifm-navbar-link-color:       #e2e8f0;
+  --ifm-navbar-link-hover-color: #ffffff;
+  --ifm-navbar-item-padding-horizontal: 0.875rem;
+
+  /* Sidebar */
+  --ifm-menu-color-active:     #22299c;
+  --ifm-menu-link-sublist-icon-filter: none;
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-weight-bold: 700;
+  --ifm-code-font-size: 94%;
+
+  /* Borders & shadows */
+  --ifm-global-border-width: 1px;
+  --ifm-color-emphasis-300: #e4e4e7;
+
+  /* Code highlight */
+  --docusaurus-highlighted-code-line-bg: rgba(34, 41, 156, 0.08);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary:         #7b85e0;
+  --ifm-color-primary-dark:    #6370d8;
+  --ifm-color-primary-darker:  #4f5ed2;
+  --ifm-color-primary-darkest: #3b4bcc;
+  --ifm-color-primary-light:   #939ad8;
+  --ifm-color-primary-lighter: #adb3e5;
+  --ifm-color-primary-lightest:#c8ccee;
+
+  --ifm-background-color:         #0d1030;
+  --ifm-background-surface-color: #131640;
+  --ifm-navbar-background-color:  #0d1030;
+  --ifm-navbar-link-color:        #c7cde8;
+  --ifm-navbar-link-hover-color:  #ffffff;
+  --ifm-color-emphasis-300:       #2a2d5a;
+  --docusaurus-highlighted-code-line-bg: rgba(123, 133, 224, 0.15);
+}
+
+/* ─── Navbar ─────────────────────────────────────────────────────────────────── */
+.navbar {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08);
+  padding: 0 1.5rem;
+}
+
+.navbar__logo img {
+  height: 28px;
+  width: auto;
+}
+
+/* Active sidebar item pill */
+.menu__link--active {
+  background: #EEF0FA;
+  color: #22299c !important;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background: rgba(123, 133, 224, 0.15);
+  color: #adb3e5 !important;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────────────────────── */
+.hero--primary {
+  background: linear-gradient(135deg, #0d1030 0%, #1a2057 45%, #22299c 100%);
+  padding: 5rem 0;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  color: #e2e8f0;
+}
+
+/* ─── Cards ─────────────────────────────────────────────────────────────────── */
+.card {
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(34, 41, 156, 0.12);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .card {
+  border-color: #2a2d5a;
+}
+
+/* ─── Tables ─────────────────────────────────────────────────────────────────── */
+table th {
+  background: #EEF0FA;
+  color: #22299c;
+  font-weight: 600;
+}
+
+[data-theme='dark'] table th {
+  background: rgba(34, 41, 156, 0.2);
+  color: #adb3e5;
+}
+
+/* ─── Operation badges ───────────────────────────────────────────────────────── */
+.badge-read   { background: #dcfce7; color: #166534; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; }
+.badge-write  { background: #dbeafe; color: #1e40af; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; }
+.badge-delete { background: #fee2e2; color: #991b1b; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; }
+
+/* ─── Custom scrollbar (matches frontend) ────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+
+/* ─── Announcement bar ───────────────────────────────────────────────────────── */
+div[class*='announcementBar'] {
+  background: #22299c !important;
+  color: #ffffff !important;
+  font-weight: 500;
+}
+div[class*='announcementBar'] a {
+  color: #c7cde8 !important;
+  text-decoration: underline;
+}

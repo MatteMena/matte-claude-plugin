@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <rect width="40" height="40" rx="9" fill="#0F9D58"/>
+  <!-- Google Sheets icon -->
+  <rect x="12" y="8" width="16" height="22" rx="2" fill="#fff"/>
+  <rect x="12" y="8" width="10" height="14" rx="2" fill="#fff"/>
+  <rect x="18" y="8" width="10" height="6" rx="2" fill="#0F9D58" opacity="0.3"/>
+  <!-- Table lines -->
+  <rect x="14" y="16" width="12" height="1" fill="#0F9D58" opacity="0.4"/>
+  <rect x="14" y="19" width="12" height="1" fill="#0F9D58" opacity="0.4"/>
+  <rect x="14" y="22" width="12" height="1" fill="#0F9D58" opacity="0.4"/>
+  <rect x="14" y="25" width="7" height="1" fill="#0F9D58" opacity="0.4"/>
+  <rect x="20" y="16" width="1" height="11" fill="#0F9D58" opacity="0.4"/>
+</svg>
