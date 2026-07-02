@@ -4,17 +4,17 @@ title: Privacy Policy
 sidebar_position: 11
 ---
 
-# Privacy Policy — MatteMena Connector
+# Privacy Policy — MatteMena Nerve Connector
 
-*Last updated: 2026-06-30*
+*Last updated: 2026-07-02*
 
-This page covers the privacy policy for the **MatteMena Connector** — the MCP server / Claude plugin that connects Claude to your advertising accounts on Meta, TikTok, Google Ads, Google Analytics (GA4), Snapchat Ads, Google Sheets, and HubSpot.
+This page covers the privacy policy for **MatteMena Nerve** — the MCP server / Claude plugin that connects Claude to your advertising accounts on Meta, TikTok, Google Ads, Google Analytics (GA4), Snapchat Ads, Google Sheets, and HubSpot.
 
 For the full MatteMena Nerve website privacy policy, see [nerve.mattemena.com/privacy-policy](https://nerve.mattemena.com/privacy-policy).
 
 ---
 
-## Data Collected by the Connector
+## Data Collected by MatteMena Nerve
 
 | Category | Examples | Purpose |
 |----------|---------|---------|
@@ -31,7 +31,7 @@ We do **not** collect:
 
 ---
 
-## How Connector Data Is Used
+## How MatteMena Nerve Uses Your Data
 
 We use the data above to:
 
@@ -74,7 +74,7 @@ We do **not**:
 | Tool call / error logs | AWS CloudWatch | 30 days, then auto-deleted |
 | Account and workspace data | PostgreSQL (AWS ap-southeast-1) | Until you delete your account; removed within 30 days |
 
-Ad platform data (campaigns, insights, etc.) is fetched on demand and returned directly to Claude. **It is not stored in our systems.**
+Ad platform data (campaigns, insights, etc.) is fetched on demand and returned directly to Claude. **It is not stored in MatteMena Nerve systems.**
 
 ---
 
@@ -83,7 +83,7 @@ Ad platform data (campaigns, insights, etc.) is fetched on demand and returned d
 - **OAuth 2.0 + PKCE** (RFC 6749 + RFC 7636) — no credentials in URL query strings
 - **Dynamic Client Registration** (RFC 7591) — each Claude session gets a short-lived client credential
 - **TLS 1.2+** on all connections
-- **Auth-guarded endpoints** — every API call requires a valid credential in the request header
+- **Auth-guarded endpoints** — every MatteMena Nerve API call requires a valid credential in the request header
 - **Least-privilege scoping** — keys are scoped to workspace permissions only
 
 ---
@@ -93,7 +93,7 @@ Ad platform data (campaigns, insights, etc.) is fetched on demand and returned d
 You may:
 
 - **Access** — request a copy of your personal data
-- **Delete** — delete your account from the dashboard; all associated data is removed within 30 days
-- **Revoke** — revoke any connected platform's OAuth token from your account settings
+- **Delete** — delete your account from the MatteMena Nerve dashboard; all associated data is removed within 30 days
+- **Revoke** — revoke any connected platform's OAuth token from your MatteMena Nerve account settings
 
 Contact: [hello@mattemena.com](mailto:hello@mattemena.com)
