@@ -101,4 +101,6 @@ Claude will use the `check-connections` tool to list your connected accounts.
 | "No accounts found" | Connect at least one platform at [nerve.mattemena.com](https://nerve.mattemena.com) |
 | Auth loop | Clear cookies and try again; ensure `nerve.mattemena.com` is reachable |
 
-For further help: [hello@mattemena.com](mailto:hello@mattemena.com)
+Using ChatGPT? See [Connect Nerve to ChatGPT](/docs/help/connect-ai/chatgpt). Seeing a plan or payment card in Claude? See [When your plan is inactive](/docs/help/billing/invoices-cancel-and-payment-failure#when-your-plan-is-inactive).
+
+For further help: see the [Help Center](/docs/help) or email [hello@mattemena.com](mailto:hello@mattemena.com)

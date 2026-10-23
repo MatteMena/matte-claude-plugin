@@ -80,6 +80,11 @@ const config: Config = {
           label: 'Docs',
         },
         {
+          to: '/docs/help',
+          label: 'Help Center',
+          position: 'left',
+        },
+        {
           to: '/docs/tools/overview',
           label: 'Tool Reference',
           position: 'left',
@@ -105,6 +110,17 @@ const config: Config = {
             { label: 'Introduction', to: '/docs/intro' },
             { label: 'Installation', to: '/docs/installation' },
             { label: 'Authentication', to: '/docs/authentication' },
+          ],
+        },
+        {
+          title: 'Help Center',
+          items: [
+            { label: 'Help Center home', to: '/docs/help' },
+            { label: 'Connect your ad accounts', to: '/docs/help/accounts/connect-accounts' },
+            { label: 'Connect to Claude', to: '/docs/help/connect-ai/claude' },
+            { label: 'Connect to ChatGPT', to: '/docs/help/connect-ai/chatgpt' },
+            { label: 'Free trial & plans', to: '/docs/help/billing/plans-and-pricing' },
+            { label: 'Troubleshooting', to: '/docs/help/troubleshooting' },
           ],
         },
         {

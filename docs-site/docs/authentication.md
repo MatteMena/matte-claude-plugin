@@ -54,13 +54,12 @@ You should never need to re-authenticate unless you explicitly revoke access or 
 
 ## Revoking access
 
-To disconnect MatteMena from Claude:
+To disconnect MatteMena from your AI assistant, remove the connector in that assistant:
 
-1. Go to [nerve.mattemena.com](https://nerve.mattemena.com)
-2. Navigate to **Settings** → **Connected Clients**
-3. Click **Revoke** next to the Claude session
+- **Claude:** **Settings** → **Connectors** → remove **Nerve**
+- **ChatGPT:** **Settings** → **Plugins** → remove **Nerve**
 
-Alternatively, remove the connector in Claude's settings.
+See [Connect Nerve to Claude](/docs/help/connect-ai/claude) and [Connect Nerve to ChatGPT](/docs/help/connect-ai/chatgpt).
 
 ---
 

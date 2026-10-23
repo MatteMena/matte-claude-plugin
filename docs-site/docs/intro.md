@@ -43,6 +43,10 @@ MatteMena uses **OAuth 2.0 with PKCE** (the same standard as "Login with Google"
 
 [Authentication guide →](/docs/authentication)
 
+## Need help using the app?
+
+The [Help Center →](/docs/help) has step-by-step guides for every page of [nerve.mattemena.com](https://nerve.mattemena.com): workspaces, connecting accounts, Nerve AI chat, workflows, analytics, connecting Claude and ChatGPT, and billing.
+
 ## Next steps
 
 - [Install the plugin →](/docs/installation)

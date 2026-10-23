@@ -78,7 +78,25 @@ Spark Ads require a connected TikTok identity. Check that your TikTok identity i
 
 ---
 
+## Billing
+
+### How much does MatteMena cost?
+
+Every new account gets a 7-day free trial with 200 credits and no card required. After that, plans start at $19/month. See [Plans and pricing](/docs/help/billing/plans-and-pricing) and [Free trial](/docs/help/billing/free-trial).
+
+### Does using MatteMena in Claude use credits?
+
+No. Credits are only used by Nerve AI chat and workflows inside the web app. See [Credits and top-ups](/docs/help/billing/credits-and-top-ups).
+
+### Claude shows "Plan required", "Trial ended" or "Payment failed"
+
+Your workspace plan is inactive. See [When your plan is inactive](/docs/help/billing/invoices-cancel-and-payment-failure#when-your-plan-is-inactive).
+
+---
+
 ## Support
+
+More step-by-step guides are in the [Help Center](/docs/help) and the [Troubleshooting](/docs/help/troubleshooting) page.
 
 For any issue not covered here, contact [hello@mattemena.com](mailto:hello@mattemena.com) with:
 - Your MatteMena workspace email
