@@ -2,24 +2,13 @@
 
 Claude Code plugin that connects Claude to your Meta, TikTok, Google Ads, and GA4 advertising data via [MatteMena](https://www.mattemena.com/).
 
-This repo contains only the plugin packaging (`.claude-plugin/`) and the built MCP server bundle (`dist/stdio.bundle.cjs`). The actual MCP server source lives in a separate, private repo.
+This repo contains only the plugin packaging (`.claude-plugin/`) and the plugin's skills (`skills/`). The actual MCP server source lives in a separate, private repo.
 
 The plugin declares one MCP server connector:
 
-- **`mattemena-remote`** (hosted): connects to `https://test-mcp.nerve.mattemena.com/mcp`, a remote HTTP MCP server with a full OAuth 2.0 + PKCE flow. No API key in config — authenticate via the connector's own login page when prompted.
+- **`mattemena-remote`** (hosted): connects to `https://mcp.nerve.mattemena.com/mcp`, a remote HTTP MCP server with a full OAuth 2.0 + PKCE flow. No API key in config — authenticate via the connector's own login page when prompted.
 
-> The bundled local connector (`mattemena-local`, running `dist/stdio.bundle.cjs` directly via `userConfig.api_key`) is temporarily disabled. To re-enable it, restore this block under `mcpServers` in `.claude-plugin/plugin.json` (and the matching `userConfig.api_key` block) — see git history for the exact config.
-> ```json
-> "mattemena-local": {
->   "command": "node",
->   "args": ["${CLAUDE_PLUGIN_ROOT}/dist/stdio.bundle.cjs"],
->   "env": {
->     "MCP_API_KEY": "${user_config.api_key}",
->     "API_BASE_URL": "https://ap-southeast-1-test-api.connect.platformance.io",
->     "TOOL_DISCOVERY_MODE": "true"
->   }
-> }
-> ```
+> The bundled local connector (`mattemena-local`) has been removed, along with `dist/stdio.bundle.cjs`. Both remain in git history.
 
 ## Install
 
@@ -29,18 +18,18 @@ The plugin declares one MCP server connector:
 
 ## Releasing an update
 
-Whenever the MCP server source changes (in the private `pf-mcp-server` repo):
+Whenever the plugin's manifests or skills change:
 
-1. In `pf-mcp-server`, run `npm run bundle:stdio` to rebuild `dist/stdio.bundle.cjs`.
-2. Copy the rebuilt `dist/stdio.bundle.cjs` into this repo's `dist/`.
-3. Bump `version` in `.claude-plugin/plugin.json`.
-4. Commit, tag, and push:
+1. Bump `version` in `.claude-plugin/plugin.json`.
+2. Commit, tag, and push:
    ```
    git add -A
    git commit -m "release: vX.Y.Z"
    git tag vX.Y.Z
    git push origin main --tags
    ```
+
+Don't commit binaries, bundles, or build output to `main`: every push is re-scanned by the Claude plugin directory, and files it can't read hold the version back.
 
 ## License
 
