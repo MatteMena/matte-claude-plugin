@@ -2,7 +2,7 @@
   "name": "mattemena-nerve",
   "displayName": "Matte Nerve",
   "description": "Connect Claude to your advertising platforms — Meta (Facebook/Instagram), TikTok, Google Ads, Google Analytics (GA4), Snapchat Ads, Google Sheets, and HubSpot — for AI-powered cross-platform ad management and analytics.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": {
     "name": "MatteMena"
   },

@@ -43,7 +43,7 @@ Set rate assumptions (CPM/CPC/CPI, CTR, conversion rate) per channel — from li
 
 ## Step 4 — Build the workbook
 
-Read `references/media-plan-brand-spec.md` in full before writing any code — it has the exact colors, fonts, borders, merged-cell layout, and formula logic. Then use `scripts/build_media_plan.py` as the starting template: it already implements the tab structure and brand system, parameterized by client/budget/channels/rates. Adapt it to the specific brief rather than rewriting from scratch each time.
+Read `references/media-plan-brand-spec.md` in full before writing any code — it has the exact colors, fonts, borders, merged-cell layout, column widths, and formula logic. Then write one openpyxl script for this brief that follows the spec exactly.
 
 **Five tabs, in this order:**
 
@@ -53,7 +53,7 @@ Read `references/media-plan-brand-spec.md` in full before writing any code — i
 4. **Spec Sheet** — ad specs (format, dimensions/ratio, duration, copy limits, file requirements) for **only the channels actually selected** in Control Settings — don't list specs for channels not in the plan.
 5. **Rationale** — one row per selected channel: phase, objective, why it was selected for this market/brief, primary KPI. This is the "why," written like a planner justifying the plan to a client, not a restatement of the spec sheet.
 
-After building: run `scripts/recalc.py <file>.xlsx` (from the `xlsx` skill) to force formula recalculation, and confirm zero formula errors before delivering. Check the phase-split and channel-split validation checks in Control Settings both resolve to 100%.
+After building: run the `xlsx` skill's recalculation script on the file to force formula recalculation, and confirm zero formula errors before delivering. Check the phase-split and channel-split validation checks in Control Settings both resolve to 100%.
 
 ## Step 5 — Deliver
 

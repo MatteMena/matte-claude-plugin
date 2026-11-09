@@ -174,5 +174,51 @@ For client-facing delivery: remove "Prepared by Platformance" and any agency bra
 - [ ] Phase split check = 100%, channel split checks = 100% for each phase
 - [ ] Spec Sheet contains only channels with nonzero budget split
 - [ ] Rationale has one row per channel actually in the plan, reasoning tied to the real brief
-- [ ] Zero formula errors after recalculation (`scripts/recalc.py`)
+- [ ] Zero formula errors after recalculation (the `xlsx` skill's recalculation script)
 - [ ] No agency attribution if client-facing
+
+## 13. Layout reference
+
+Exact layout values for the tabs above. Where anything here seems to differ from an earlier section, the earlier section wins.
+
+**Build order:** build Control Settings first so the other tabs can reference its cells, then put the tabs in the order given in section 3.
+
+**Column widths**
+
+| Tab | Widths |
+|---|---|
+| Media Plan Summary | A 18, B 22, C 16, D 12, E 15, F 12, G 12, H 14 |
+| Detail Media Plan | Phase 21.7, Platform 18, Placement/Targeting 33.2, Ad Format 25.9, Duration 15.5, Buying Model 17.9, Unit 7, Rate 8, Est. Impressions 14, Est. Reach 12, Est. CTR 7, Est. Clicks 11, Conv. Rate 9, Est. Installs 10, Est. Orders 10, CPO 10, Total Budget 14.7 |
+| Control Settings | A 26, B 16, C 14, D 14 |
+| Spec Sheet | Channel 16, Ad Format 22, Dimensions 20, Duration 18, Copy Limits 34, File Requirements 18 |
+| Rationale | A 16, B 12, C 20, D 50, E 14 |
+
+**Control Settings**
+
+- Title bar merged A1:C1, `#0D2137` fill, white bold 12pt: `[CLIENT] — MEDIA PLAN ASSUMPTIONS`.
+- Instruction row merged A2:C2, `#1A3A5C` fill, `#D6E4F0` 8pt text.
+- Section banners start at row 4, `#1B6CA8` fill, white bold 9pt. Awareness and Conversion split banners use `#1E7145` and `#C55A11` instead.
+- Table headers `#0D2137` fill, white bold 8pt. Row labels in column A are bold 8pt.
+- Rates table columns: Channel (with buying model in brackets, e.g. `Meta (CPM)`) | Rate | CTR | Conv. Rate.
+- Number formats: `0%` for phase split, channel split, reach factor and CHECK rows; `0.0%` for % of total, CTR and conversion rate.
+- CHECK rows: `#D9D9D9` fill, bold 8pt, labeled `CHECK (must = 100%)`.
+
+**Media Plan Summary**
+
+- `CAMPAIGN OVERVIEW` title merged A2:H2. Grid rows 3–7: label in A, value merged B:D, label in E, value merged F:H.
+- Section banners merged across A:H.
+
+**KPI Framework** columns: KPI | Definition | Measurement Tool | Priority. Default rows, to adjust to the brief:
+
+| KPI | Definition | Priority |
+|---|---|---|
+| CPO | Cost per Order/Purchase | Primary |
+| CTR | Click-through Rate | Secondary |
+| Reach | Unique users reached | Secondary |
+
+Measurement Tool is `Matte connector / platform insights` in `#1B6CA8` font. Priority badges are 7pt, bold for Primary.
+
+**Rationale**
+
+- Banner merged A1:E1 with the title `CHANNEL STRATEGY RATIONALE`; column headers in row 2.
+- Phase cell fill: `#E2EFDA` Awareness, `#FCE4D6` Conversion, `#D6E4F0` Both.

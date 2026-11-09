@@ -1,7 +1,7 @@
 # Matte Connector — Skills
 
-Four skills for the `matte-claude-plugin` repo. Drop this whole `skills/` folder
-into the repo root (same level as `dist/` and `.claude-plugin/`) — Claude Code
+Six skills for the `matte-claude-plugin` repo. This `skills/` folder sits at
+the repo root (same level as `.claude-plugin/`) — Claude Code
 auto-discovers any `skills/*/SKILL.md`, no changes needed to `plugin.json`.
 Run `claude plugin validate .` after adding to confirm.
 
@@ -15,10 +15,8 @@ skills/
 │
 ├── matte-media-planner/           agency-grade media plans, delivered as a
 │   ├── SKILL.md                   branded 5-tab Excel file (not a chat reply)
-│   ├── references/
-│   │   └── media-plan-brand-spec.md   exact Platformance colors/fonts/borders/formulas
-│   └── scripts/
-│       └── build_media_plan.py        openpyxl generator, edit CONFIG per brief and run
+│   └── references/
+│       └── media-plan-brand-spec.md   exact Platformance colors/fonts/borders/formulas
 │
 ├── matte-account-audit/           deep, severity-scored audits of live accounts
 │   ├── SKILL.md
@@ -60,10 +58,3 @@ skills/
   Builder automation first so the same logic doesn't get maintained in two
   places; falls back to manual pacing/pause/scale/reallocation only when
   nothing already covers the request.
-
-## Known follow-up
-
-`build_media_plan.py` covers the core structure and formula logic faithfully
-but isn't pixel-identical to the original template on every border rule.
-Worth generating one real sample plan and checking it against a live brief
-before it's in regular rotation.
